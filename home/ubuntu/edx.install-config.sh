@@ -13,31 +13,26 @@
 #---------------------------------------------------------
 
 rm -rf /home/ubuntu/edx.conf-cmeonline
-git clone https://github.com/cmeonline/edx.conf-cmeonline.git
+git clone https://github.com/jigsaw-labs/edx.config.git
 
 echo 1. open edx LMS + CMS configuration
-sudo cp /home/ubuntu/edx.conf-cmeonline/edx/app/edxapp/*.json /edx/app/edxapp/
+sudo cp /home/ubuntu/edx.config/edx/app/edxapp/*.json /edx/app/edxapp/
 sudo chown edxapp /edx/app/edxapp/*.json
 sudo chgrp www-data /edx/app/edxapp/*.json
 
-echo 2. Nginx custom configurations
+#echo 2. Nginx custom configurations
 # these contain lets encrypt ssl certificate and https redirection
-sudo cp /home/ubuntu/edx.conf-cmeonline/edx/app/nginx/sites-available/lms /edx/app/nginx/sites-available/
-sudo cp /home/ubuntu/edx.conf-cmeonline/edx/app/nginx/sites-available/cms /edx/app/nginx/sites-available/
-sudo service nginx restart
+# nothing to do
 
-echo 3. Ansible customizations
+#echo 3. Ansible customizations
 # copy server-vars and any other mods to ansible-related work flows
-sudo cp /home/ubuntu/edx.conf-cmeonline/edx/app/edx_ansible/*.* /edx/app/edx_ansible/
+# nothing to do
 
-echo 4. install custom theme
-sudo rm -r /edx/app/edxapp/edx-platform/themes/cmeonline-theme
-sudo cp -R /home/ubuntu/edx.conf-cmeonline/themes/cmeonline-theme /edx/app/edxapp/edx-platform/themes/
-sudo chown -R edxapp /edx/app/edxapp/edx-platform/themes/
-sudo chgrp -R edxapp /edx/app/edxapp/edx-platform/themes/
+#echo 4. install custom theme
+# nothing to do
 
-echo 5. django configuration files
-sudo cp -R /home/ubuntu/edx.conf-cmeonline/edx/app/edxapp/edx-platform/lms/envs/*.* /edx/app/edxapp/edx-platform/lms/envs/
+#echo 5. django configuration files
+# nothing to do
 
 #echo 6. admin scripts
 #sudo cp -R /home/ubuntu/edx.conf-cmeonline/home/ubuntu/* /home/ubuntu/
