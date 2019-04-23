@@ -12,7 +12,7 @@
 #             6. admin scripts
 #---------------------------------------------------------
 
-rm -rf /home/ubuntu/edx.conf-cmeonline
+rm -rf /home/ubuntu/edx.config
 git clone https://github.com/jigsaw-labs/edx.config.git
 
 echo 1. open edx LMS + CMS configuration
