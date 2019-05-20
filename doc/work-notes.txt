@@ -1,3 +1,10 @@
-ipadress:	learn.jigsawlabs.co
+ipadress:	54.201.209.199
 
 domain:		http://learn.jigsawlabs.co
+
+
+
+
+user:	travis
+email:	travis@tailoredlabs.org
+pwd:	D/9U62Zn2?vr$EP[RN]6
